@@ -206,6 +206,9 @@ class Application:
             excerpter = TextExcerpter()
             excerpt, clipped_left, clipped_right = excerpter.get_excerpt(item.text, 220, pattern)
 
+            # Put a space before http to separate things better
+            excerpt = re.sub(r"(\S){1}http", r"\1 http", excerpt)
+
             # Hashtag or mention
             excerpt = re.sub("(?<!\w)([#@])(\w+)",
                              term.green("\\g<1>") + term.bright_green("\\g<2>"), excerpt)
