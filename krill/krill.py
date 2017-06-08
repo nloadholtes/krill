@@ -208,6 +208,7 @@ class Application:
 
             # Put a space before http to separate things better
             excerpt = re.sub(r"(\S){1}http", r"\1 http", excerpt)
+            excerpt = re.sub(r"(\S){1}pic.twitter.com", r"\1 pic.twitter.com", excerpt)
 
             # Hashtag or mention
             excerpt = re.sub("(?<!\w)([#@])(\w+)",
