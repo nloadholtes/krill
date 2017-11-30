@@ -204,7 +204,7 @@ class Application:
 
         if item.text is not None:
             excerpter = TextExcerpter()
-            excerpt, clipped_left, clipped_right = excerpter.get_excerpt(item.text, 220, pattern)
+            excerpt, clipped_left, clipped_right = excerpter.get_excerpt(item.text, 280, pattern)
 
             # Put a space before http to separate things better
             excerpt = re.sub(r"(\S){1}http", r"\1 http", excerpt)
